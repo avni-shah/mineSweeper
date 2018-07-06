@@ -41,20 +41,12 @@ public class Field {
 		int counter = 0;
 		for (int d = x - 1; d <= x + 1; d++) {
 			for (int i = y - 1; i <= y + 1; i++) {
-				
-				if (Square1 [d][i] == new Bomb()) {
+				if (d<0 || d>7 || i<0 || i>7) {
+					continue;
+				}
+				if (Square1 [d][i] == new Bomb(0)) {
 					counter++;
 				}
-				
-//				for (int yo = 0; yo < 10; yo++) {
-//					int fatCat = numbers.get(yo);
-//					
-//					
-//					int row = fatCat / 8;
-//					int column = fatCat % 8;
-//					
-//					if()
-//				}
 			}
 		}
 		
